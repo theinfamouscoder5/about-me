@@ -65,27 +65,80 @@
                   opacity: 1;
               }
 
-      .glow-on-hover:after {
-        z-index: -1;
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background: #111;
-        left: 0;
-        top: 0;
-        border-radius: 10px;
-      }
+              .glow-on-hover:after {
+                  z-index: -1;
+                  content: '';
+                  position: absolute;
+                  width: 100%;
+                  height: 100%;
+                  background: #111;
+                  left: 0;
+                  top: 0;
+                  border-radius: 10px;
+              }
+              
+              .discord-glow-on-hover {
+              height: 50px;
+              border: none;
+              outline: none;
+              color: #fff;
+              background: #111;
+              cursor: pointer;
+              position: relative;
+              z-index: 0;
+              border-radius: 10px;
+            }
 
-      @keyframes glowing {
-        0% { background-position: 0 0; }
-        50% { background-position: 400% 0; }
-        100% { background-position: 0 0; }
-      }
+            .discord-glow-on-hover:before {
+                content: '';
+                background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+                position: absolute;
+                top: -2px;
+                left:-2px;
+                background-size: 400%;
+                z-index: -1;
+                filter: blur(5px);
+                width: calc(100% + 4px);
+                height: calc(100% + 4px);
+                animation: glowing 20s linear infinite;
+                opacity: 0;
+                transition: opacity .3s ease-in-out;
+                border-radius: 10px;
+              }
+
+              .discord-glow-on-hover:active {
+                color: #000
+              }
+
+              .discord-glow-on-hover:active:after {
+                  background: transparent;
+              }
+
+              .discord-glow-on-hover:hover:before {
+                  opacity: 1;
+              }
+
+              .discord-glow-on-hover:after {
+                  z-index: -1;
+                  content: '';
+                  position: absolute;
+                  width: 100%;
+                  height: 100%;
+                  background: #111;
+                  left: 0;
+                  top: 0;
+                  border-radius: 10px;
+              }
+
+              @keyframes glowing {
+                  0% { background-position: 0 0; }
+                  50% { background-position: 400% 0; }
+                  100% { background-position: 0 0; }
+              }
       
-      h1 {
-        font-family: monospace;
-      }
+              h1 {
+                font-family: monospace;
+              }
         </style>
     </head>
     <body class="bg-dark" style="background-image: url('coding-developer-code.gif');">
@@ -119,13 +172,12 @@
                   <div class="card bg-transparent text-white" style="height: 220px;">
                     <div class="card-body">
                       <h1 class="card-title">Sup, I'm Cody,</h1>
-                      <h4 class="card-text">a full stack developer currently learning Lua</h4>
-                      <a href="#" class="btn btn-danger"><img src="youtube.svg"> YouTube</a>
-                      <a href="#" class="btn discord text-white" style="background-color: #7289da; border-color: #7289da;"><img src="discord.svg"> Discord</a>
+                      <h4 class="card-text">a full stack developer currently learning Lua</h4>                      
+                      <a href="#projects" style="text-decoration: none;"><button style="cursor: pointer; color: white; padding: 5px 20px; text-align: center; font-size: 18px; border-radius: 20px; border-size: 0px; margin-top: 20px; font-family: monospace; outline: none; width: auto;" class="glow-on-hover">My Projects</button></a>
+                      <a href="#projects" style="text-decoration: none;"><button style="cursor: pointer; color: white; padding: 5px 20px; text-align: center; font-size: 18px; border-radius: 20px; border-size: 0px; margin-top: 20px; font-family: monospace; outline: none; width: auto;" class="glow-on-hover"><img src="discord.svg"> GitHub</button></a>                  
+                      <a href="#" class="btn discord text-white" style="background-color: #7289da; border-color: #7289da;"> Discord</a>
                       <a href="https://github.com/theinfamouscoder5" class="btn btn-secondary"><img src="github.svg"> GitHub</a>
-                      <br>
-                      <a href="#" class="btn btn-primary" style="margin-top: 10px;">My Projects</a>
-                    </div>
+                      </div>
                   </div>
                 </div>
                 <div class="col-sm-6">
@@ -140,7 +192,7 @@
                         <img src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E">
                         <img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54">
                         <img src="https://img.shields.io/badge/threejs-black?style=for-the-badge&logo=three.js&logoColor=white">
-                        <img src="https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white">
+                              <img src="https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white">
                         <img src="https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white">
                       </div>
                     </div>
