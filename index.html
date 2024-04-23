@@ -76,7 +76,6 @@
                   top: 0;
                   border-radius: 10px;
               }
-              
               .discord-glow-on-hover {
               height: 50px;
               border: none;
@@ -91,7 +90,7 @@
 
             .discord-glow-on-hover:before {
                 content: '';
-                background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+                background: linear-gradient(45deg, #7289da, #4b68d0);
                 position: absolute;
                 top: -2px;
                 left:-2px;
@@ -129,6 +128,60 @@
                   top: 0;
                   border-radius: 10px;
               }
+              
+            .github-glow-on-hover {
+              height: 50px;
+              border: none;
+              outline: none;
+              color: #fff;
+              background: #111;
+              cursor: pointer;
+              position: relative;
+              z-index: 0;
+              border-radius: 10px;
+            }
+
+            .github-glow-on-hover:before {
+                content: '';
+                background: linear-gradient(45deg, #2dba4e, #fafbfc);
+                position: absolute;
+                top: -2px;
+                left:-2px;
+                background-size: 400%;
+                z-index: -1;
+                filter: blur(5px);
+                width: calc(100% + 4px);
+                height: calc(100% + 4px);
+                animation: glowing 20s linear infinite;
+                opacity: 0;
+                transition: opacity .3s ease-in-out;
+                border-radius: 10px;
+              }
+
+              .github-glow-on-hover:active {
+                color: #000
+              }
+
+              .github-glow-on-hover:active:after {
+                  background: transparent;
+              }
+
+              .github-glow-on-hover:hover:before {
+                  opacity: 1;
+              }
+
+              .github-glow-on-hover:after {
+                  z-index: -1;
+                  content: '';
+                  position: absolute;
+                  width: 100%;
+                  height: 100%;
+                  background: #111;
+                  left: 0;
+                  top: 0;
+                  border-radius: 10px;
+              }
+
 
               @keyframes glowing {
                   0% { background-position: 0 0; }
@@ -174,9 +227,8 @@
                       <h1 class="card-title">Sup, I'm Cody,</h1>
                       <h4 class="card-text">a full stack developer currently learning Lua</h4>                      
                       <a href="#projects" style="text-decoration: none;"><button style="cursor: pointer; color: white; padding: 5px 20px; text-align: center; font-size: 18px; border-radius: 20px; border-size: 0px; margin-top: 20px; font-family: monospace; outline: none; width: auto;" class="glow-on-hover">My Projects</button></a>
-                      <a href="#projects" style="text-decoration: none;"><button style="cursor: pointer; color: white; padding: 5px 20px; text-align: center; font-size: 18px; border-radius: 20px; border-size: 0px; margin-top: 20px; font-family: monospace; outline: none; width: auto;" class="glow-on-hover"><img src="discord.svg"> GitHub</button></a>                  
-                      <a href="#" class="btn discord text-white" style="background-color: #7289da; border-color: #7289da;"> Discord</a>
-                      <a href="https://github.com/theinfamouscoder5" class="btn btn-secondary"><img src="github.svg"> GitHub</a>
+                      <a href="#projects" style="text-decoration: none;"><button style="cursor: pointer; color: white; padding: 5px 20px; text-align: center; font-size: 18px; border-radius: 20px; border-size: 0px; margin-top: 20px; font-family: monospace; outline: none; width: auto;" class="discord-glow-on-hover"><img src="discord.svg"> Discord</button></a>                  
+                      <a href="https://github.com/theinfamouscoder5" style="text-decoration: none;"><button style="cursor: pointer; color: white; padding: 5px 20px; text-align: center; font-size: 18px; border-radius: 20px; border-size: 0px; margin-top: 20px; font-family: monospace; outline: none; width: auto;" class="github-glow-on-hover"><img src="github.svg"> GitHub</button></a>                  
                       </div>
                   </div>
                 </div>
