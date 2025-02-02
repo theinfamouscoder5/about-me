@@ -1,0 +1,400 @@
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    color: #e2e8f0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* Center vertically */
+    align-items: center;
+    /* Center horizontally */
+    min-height: 100vh;
+    /* Ensure body is at least viewport height */
+    overflow-x: hidden;
+    /* Prevent horizontal scroll */
+    overflow-y: auto;
+    /* Allow body to scroll */
+    background-color: #000000;
+}
+
+#particles-js {
+    /* position: fixed; */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: #000000;
+}
+
+.container {
+    background-color: #111827;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 580px;
+    width: 90%;
+    margin: 20px;
+    /* The crucial parts: */
+    height: 80vh;
+    /* Or any value less than 100vh */
+    overflow-y: auto;
+    /* Enable scrolling *within* the container */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+}
+
+.no-cursor {
+    user-select: none;
+    /* Prevents text selection */
+    cursor: default;
+    /* Changes the cursor to the default arrow */
+}
+
+header {
+    text-align: left;
+    margin-bottom: 30px;
+    animation: fadeInDown 1s ease-in-out;
+    margin-left: 20px;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* Distribute space between image and text */
+}
+
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    margin-left: 20px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #334155;
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+h1 {
+    color: #cbd5e0;
+}
+
+h2 {
+    color: #79879a;
+}
+
+.regular-link {
+    color: #7678ed;
+    /* Example: A nice blue color */
+    text-decoration: none;
+    /* Remove underlines */
+    transition: color 0.3s ease;
+    /* Smooth color transition on hover */
+}
+
+.regular-link:hover {
+    color: #a19de8;
+}
+
+.header-text > h2 {
+    font-size: 1.5rem;
+}
+
+#about {
+    margin-bottom: 30px;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.about-content {
+    display: flex;
+    align-items: flex-start;
+    /* Align items to the top */
+    gap: 20px;
+}
+
+.about-content p {
+    flex: 1;
+    /* Allow text to take up available space */
+}
+
+body {
+    /* ... (other styles) */
+    min-height: 100vh;
+    /* Ensure full viewport height */
+    padding: 20px;
+    /* Add padding to the body */
+    box-sizing: border-box;
+    /* Include padding in width/height */
+}
+
+.container {
+    /* ... (other styles) */
+    max-height: calc(100vh - 40px);
+    /* Account for body padding */
+    margin: 0 auto;
+    /* Center horizontally */
+}
+
+
+#links {
+    margin-bottom: 30px;
+    text-align: center;
+    width: 100%;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.links-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.links-container a {
+    background-color: #1f2937;
+    color: #e2e8f0;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.links-container a:hover {
+    background-color: #374151;
+}
+
+#projects {
+    margin-bottom: 30px;
+    width: 100%;
+    animation: fadeInLeft 1s ease-in-out;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.project-card {
+    background-color: #1f2937;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    text-decoration: none;
+    border-bottom: none;
+}
+
+.project-card h3, .project-card p {
+    color: #e2e8f0;
+    text-decoration: none;
+    border-bottom: none;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    background-color: #374151;
+}
+
+#contact {
+    margin-bottom: 30px;
+    text-align: center;
+    animation: fadeInRight 1s ease-in-out;
+}
+
+#skills {
+    margin-bottom: 30px;
+    animation: fadeInUp 1s ease-in-out;
+    /* Or any other animation you prefer */
+    width: 100%;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    /* Responsive grid */
+    gap: 20px;
+}
+
+.skill {
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.skill:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.progress-bar {
+    background-color: #1f2937;
+    height: 20px;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-top: 10px;
+    position: relative;
+    transition: background-color 0.3s ease;
+    /* Smooth transition for background color */
+}
+
+.progress-bar:hover {
+    background-color: #374151;
+    /* Slightly lighter on hover */
+}
+
+.progress-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    transition: top 0.3s ease;
+    /* Smooth transition for the top property */
+}
+
+.progress {
+    background-color: #6366f1;
+    /* Color of the progress */
+    height: 100%;
+    width: 0;
+    /* Initial width (will be set by inline style) */
+    border-radius: 4px;
+    transition: width 0.5s ease-in-out;
+    /* Smooth width transition */
+}
+
+.skill:hover .progress-text {
+    top: 50%;
+    /* Correctly positioned on hover */
+}
+
+/* Target the progress-bar directly on skill hover: */
+.skill:hover .progress-bar {
+    /* <--- This is the key change */
+    background-color: #374151;
+}
+
+/* Add this rule to position text correctly when NOT hovering: */
+.progress-text {
+    top: 50%;
+    /* Center vertically */
+}
+
+.skill h3 {
+    color: #cbd5e0;
+    /* Lighter color for skill names */
+}
+
+footer {
+    text-align: center;
+    color: #64748b;
+    padding-top: 15px;
+    border-top: 1px solid #4b5563;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem; /* Space between elements */
+}
+
+footer p, /* Style the paragraph */
+footer span, /* Style the bullet */
+.footer-link { /* Style the link */
+    color: #64748b; /* Common color for all elements */
+}
+
+footer p {
+    display: inline-block; /* Prevent p from stretching */
+}
+
+.footer-link {
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+    color: #a19de8;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+    /* Make the track transparent */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #6366f1;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #4f46e5;
+}
