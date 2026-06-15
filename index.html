@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cody - About Me</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/about.css">
+    <link rel="stylesheet" href="assets/css/projects.css">
+    <script src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.10/dist/htmx.min.js" integrity="sha384-H5SrcfygHmAuTDZphMHqBJLc3FhssKjG7w/CeCpFReSfwBWDTKpkzPP8c+cLsK+V" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <div id="container">
+        <div id="background">
+            <div class="column">
+                <div>
+                    <img src="/assets/images/icons/mycomputer.png" alt="My Computer">
+                    <p>My Computer</p>
+                </div>
+                <div>
+                    <img src="/assets/images/icons/mynetworkplaces.png" alt="My Network Places">
+                    <p>My Network<br>Places</p>
+                </div>
+                <div>
+                    <img src="/assets/images/icons/recyclebin.png" alt="Recycle Bin">
+                    <p>Recycle Bin</p>
+                </div>
+                <div>
+                    <img src="/assets/images/icons/downloads.png" alt="Downloads">
+                    <p>Downloads</p>
+                </div>
+            </div>
+        </div>
+        <div id="draggable-container">
+
+            <div class="window" data-window-url="/windows/about.html" style="left: 25%; top: 15%;">
+                <div class="top">
+                    <div class="title">
+                        <p>About Me<span style="opacity: 25%; margin-left: 10px;">drag this window around!</span></p>
+                        <button hx-on:click="this.closest('.window').remove()">X</button>
+                    </div>
+                    <div class="menu">
+                        <p>File</p>
+                        <p>Edit</p>
+                        <p>View</p>
+                        <p>Go</p>
+                        <p>Help</p>
+                    </div>
+                </div>
+                <div class="content" id="about-content">
+                    <header>
+                        <h2>Hi, I'm Cody</h2>
+                        <p>Welcome to my corner of the internet!</p>
+                    </header>
+
+                    <p>I like to code stuff at random and then forget about it 2 days later. But everyone has done that at some point in their life, no?</p>
+                    <p>Anyways, I like cybersecurity, aviation, boating.. and of course I'm a <a href="https://en.wikipedia.org/wiki/American_Coaster_Enthusiasts" target="_blank">coaster enthusiast</a>.</p>
+
+                    <hr>
+
+                    <h3>My Skills</h3>
+
+                    <div class="skillbox">
+                        <div class="skilltype">
+                            <p>Frontend</p>
+                            <ul>
+                                <li>HTML</li>
+                                <li>JavaScript</li>
+                                <li>CSS</li>
+                                <li>Tailwind CSS</li>
+                                <li>jQuery</li>
+                                <li>Swift</li>
+                            </ul>
+                        </div>
+                        <div class="skilltype">
+                            <p>Backend</p>
+                            <ul>
+                                <li>Python</li>
+                                <li>C</li>
+                                <li>PHP</li>
+                                <li>Lua</li>
+                                <li>Node.js</li>
+                            </ul>
+                        </div>
+                        <div class="skilltype">
+                            <p>Other</p>
+                            <ul>
+                                <li>Git</li>
+                                <li>Firebase</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <h3>Achievements</h3>
+
+                    <ul>
+                        <li>CyberPatriot 18 National Finals Winner</li>
+                        <li>i have a life</li>
+                        <li><i>and more to come...</i></li>
+                    </ul>
+
+                    <hr>
+
+                    <h3>Navigation</h3>
+
+                    <p>Navigate to other windows like my projects or contact info using the taskbar at the bottom!</p>
+
+                    <hr>
+
+                    <h3>Source</h3>
+                    <p>You can find the source code for this website on <a href="https://github.com/theinfamouscoder5/about-me" target="_blank">GitHub</a>.</p>
+                    <p>Please note that this portfolio is meant to look old and unthemed, so don't expect for these windows to look modern</p>
+                </div>
+                <div class="bottom">
+                    <div>
+                        <p><script>(function(s) {var p = s.parentNode;var windowEl = s.closest('.window');var contentEl = windowEl.querySelector('.content');p.textContent = contentEl.children.length + '  object(s)';})(document.currentScript);</script></p>
+                    </div>
+                    <div style="padding-left: 5px;">hi :D</div>
+                </div>
+            </div>
+        </div>
+        <div id="taskbar">
+            <button hx-get="/windows/about.html" hx-target="#draggable-container" hx-swap="beforeend"><span>About Me</span></button>
+            <button hx-get="/windows/projects.html" hx-target="#draggable-container" hx-swap="beforeend"><span>My Projects</span></button>
+            <button hx-get="/windows/contact.html" hx-target="#draggable-container" hx-swap="beforeend"><span>Contact Me</span></button>
+        </div>
+    </div>
+
+    <script src="/assets/js/drag.js"></script>
+</body>
+</html>

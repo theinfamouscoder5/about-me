@@ -1,0 +1,25 @@
+#about-content {
+    background-image: url(/assets/images/clouds.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#about-content header h2 {
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+#about-content header p {
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+#about-content .skillbox {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#about-content .skillbox .skilltype {
+    width: calc(100% / 3);
+
+}

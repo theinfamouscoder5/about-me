@@ -1,0 +1,68 @@
+<div class="window">
+    <div class="top">
+        <div class="title">
+            <p>My Projects</p>
+            <button hx-on:click="this.closest('.window').remove()">X</button>
+        </div>
+        <div class="menu">
+            <p>File</p>
+            <p>Edit</p>
+            <p>View</p>
+            <p>Go</p>
+            <p>Help</p>
+        </div>
+    </div>
+    <div class="content" id="projects-content">
+        <header>
+            <h2>My Projects</h2>
+            <p>Here are some of my projects!</p>
+        </header>
+        
+        <h3>Current Projects</h3>
+        <div class="projects">
+            <div class="project">
+                <img src="/assets/images/codys-shack.png" alt="Cody's Shack">
+                <h4>Cody's Shack</h4>
+                <p>A unique online gaming platform, where you get virtual discs every month filled with fun and simple games</p>
+                <div class="links">
+                    <a href="https://github.com/codys-shack" target="_blank">GitHub</a>
+                    <a href="https://discord.gg/9YszZfB54K" target="_blank">Discord Server</a>
+                </div>
+            </div>
+            <div class="project">
+                <img src="/assets/images/supertuxgalaxy.png" alt="SuperTuxGalaxy">
+                <h4>SuperTuxGalaxy</h4>
+                <p>A 3D platformer adventure game made in Godot</p>
+                <div class="links">
+                    <a href="https://github.com/supertuxgalaxy" target="_blank">GitHub</a>
+                </div>
+            </div>
+        </div>
+
+        <h3>Past Projects</h3>
+        <div class="projects">
+            <div class="project">
+                <img src="/assets/images/background-cropped.png" alt="Portfolio">
+                <h4>Portfolio</h4>
+                <p>This website! Made in under an hour</p>
+                <div class="links">
+                    <a href="https://github.com/theinfamouscoder5/about-me" target="_blank">GitHub</a>
+                </div>
+            </div>
+            <div class="project">
+                <img src="/assets/images/codys-shack-legacy.png" alt="Cody's Shack Legacy">
+                <h4>Cody's Shack Legacy</h4>
+                <p>A simple game site based off 3kh0 Lite</p>
+                <div class="links">
+                    <a href="https://github.com/codys-shack/legacy" target="_blank">GitHub</a>
+                    <a href="https://cs-legacy.pages.dev/" target="_blank">Website</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bottom">
+        <div>
+            <p><script>(function(s) {var p = s.parentNode;var windowEl = s.closest('.window');var contentEl = windowEl.querySelector('.content');p.textContent = contentEl.children.length + '  object(s)';})(document.currentScript);</script></p>
+        </div>
+    </div>
+</div>

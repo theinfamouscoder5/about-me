@@ -1,0 +1,227 @@
+@font-face {
+  font-family: "Tahoma";
+  src: url("/assets/fonts/tahoma.ttf") format("truetype");
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: "Tahoma", sans-serif;
+  cursor: url("/assets/cursors/default_arrow.cur"), auto;
+}
+
+a {
+  color: rgb(0, 0, 238);
+  text-decoration: underline;
+  cursor: url("/assets/cursors/harrow.cur"), auto;
+}
+
+button {
+  cursor: url("/assets/cursors/harrow.cur"), auto;
+}
+
+p, 
+span, 
+input[type="text"], 
+textarea {
+  cursor: url('/assets/cursors/beam_r.cur'), auto;
+}
+
+body, 
+#container, 
+#taskbar, 
+.window, 
+.window .top,
+#background {
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+#background p {
+  cursor: url("/assets/cursors/default_arrow.cur"), auto !important;
+}
+
+#background .column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-left: 30px;
+  margin-top: 30px;
+  width: 100px;
+}
+
+#background .column div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#background .column div img {
+    width: 48px;
+    height: 48px;
+}
+
+#background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 40px);
+  z-index: 0;
+}
+
+.window .content,
+.window .content * {
+  -webkit-user-select: text; 
+  -ms-user-select: text;     
+  user-select: text;         
+}
+
+#container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("/assets/images/background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+}
+
+#draggable-container {
+  position: relative;
+  flex-grow: 1;
+  margin-bottom: 40px;
+}
+
+#taskbar {
+  height: 40px;
+  background-color: #c0c0c0;
+  display: flex;
+  align-items: center;
+  position: fixed; 
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+}
+
+#taskbar button {
+  height: 100%;
+  background-color: #c0c0c1;
+  border-right: #909090 2px solid;
+  border-left: #ffffff 2px solid;
+  border-top: #ffffff 2px solid;
+  margin-right: 2px;
+  width: 12%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000000;
+  font-size: 1rem;
+  font-family: "Tahoma", sans-serif;
+  cursor: url("/assets/cursors/harrow.cur"), url("/assets/cursors/harrow.png"), auto !important;
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+#taskbar button span {
+  cursor: url("/assets/cursors/harrow.cur"), url("/assets/cursors/harrow.png"), auto !important;
+  pointer-events: none;
+}
+
+.window {
+  background-color: #ffffff;
+  width: 50vw;
+  max-height: 65vh;
+  border-top: #ffffff 2px solid;
+  border-left: #ffffff 2px solid;
+  border-right: #909090 2px solid;
+  border-bottom: #909090 2px solid;
+  position: absolute;
+  z-index: 1;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.window .top {
+  width: 100%;
+}
+
+.window .top .title {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  background: linear-gradient(to right, #052999, #107fce);
+  align-items: center;
+  height: 25px;
+  color: #ffffff;
+  cursor: url("/assets/cursors/hmove.cur"), auto;
+  user-select: none;
+}
+
+.window .top .title:active {
+  cursor: url("/assets/cursors/hmove.cur"), auto;
+}
+
+.window .top .title button {
+  width: 25px;
+  height: 25px;
+  border-top: #ffffff 2px solid;
+  border-left: #ffffff 2px solid;
+  border-right: #909090 2px solid;
+  border-bottom: #909090 2px solid;
+  color: #000000;
+  font-weight: bold;
+  cursor: url("/assets/cursors/harrow.cur"), auto;
+}
+
+.window .top .menu {
+  display: flex;
+  gap: 10px;
+  padding: 5px;
+  background-color: #c0c0c0;
+  height: 20px;
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+.window .top .menu p::first-letter {
+  text-decoration: underline;
+}
+
+.window .content {
+  padding: 10px;
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  border-top: #909090 2px solid;
+  border-left: #909090 2px solid;
+  border-bottom: #ffffff 2px solid;
+  border-right: #ffffff 2px solid;
+}
+
+.window .bottom {
+  height: 20px;
+  padding: 5px;
+  display: flex;
+  background-color: #c0c0c0;
+  border-top: #909090 2px solid;
+  border-left: #909090 2px solid;
+  border-bottom: #ffffff 2px solid;
+  border-right: #ffffff 2px solid;
+  font-size: 0.8rem;
+  align-items: center;
+}
+
+.window .bottom div {
+  height: 30px;
+  border-right: #ffffff 2px solid;
+  display: flex;
+  align-items: center;
+  padding-right: 5px;
+}

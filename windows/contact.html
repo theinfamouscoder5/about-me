@@ -1,0 +1,42 @@
+<div class="window">
+    <div class="top">
+        <div class="title">
+            <p>Contact Me</p>
+            <button hx-on:click="this.closest('.window').remove()">X</button>
+        </div>
+        <div class="menu">
+            <p>File</p>
+            <p>Edit</p>
+            <p>View</p>
+            <p>Go</p>
+            <p>Help</p>
+        </div>
+    </div>
+    <div class="content" id="contact-content">
+        <header>
+            <h2>Contact Me</h2>
+            <p>Feel free to reach out to me through any of the platforms below!</p>
+        </header>
+        
+        <ul>
+            <li>Discord <span style="opacity: 50%;">(preferred)</span></li>
+            <li style="list-style-type: none;">
+                <ul>
+                    <li><a href="https://discord.com/users/953070641777639454/" target="_blank">Profile @theinfamouscoder</a></li>
+                    <li><a href="https://discord.gg/9YszZfB54K" target="_blank">Cody's Shack Server</a></li>
+                </ul>
+            </li>
+            <li>Email</li>
+            <li style="list-style-type: none;">
+                <ul>
+                    <li><a href="mailto:theinfamouscoder5@gmail.com">theinfamouscoder5@gmail.com</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="bottom">
+        <div>
+            <p><script>(function(s) {var p = s.parentNode;var windowEl = s.closest('.window');var contentEl = windowEl.querySelector('.content');p.textContent = contentEl.children.length + '  object(s)';})(document.currentScript);</script></p>
+        </div>
+    </div>
+</div>
