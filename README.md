@@ -3,4 +3,4 @@ Welcome to my portfolio website source code! I made this website in under an hou
 
 Please feel free to take a look at the code!
 
-This site is accessible at https://cody.is-a.dev/
+This site is accessible at https://cody.is-a.dev/.
